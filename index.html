@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ng Yin Hern — Portfolio</title>
+  <meta name="description" content="Portfolio of Ng Yin Hern — Computer Science at UTAR, working with Python, data and AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============ EDIT ME: replace "Your Name", bio, projects and links below ============ -->
+
+  <header class="nav">
+    <a href="#top" class="logo">YIN HERN<span>.</span></a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="btn btn-small" id="themeToggle" type="button" aria-label="Toggle dark mode">☾</button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="tag tag-pink">👋 Open to Data Scientist &amp; Data Analyst roles</span>
+        <h1>
+          Hi, I'm <mark class="hl-yellow">NG YIN HERN</mark>.<br />
+          I turn <span class="squiggle">messy data</span> into useful tools.
+        </h1>
+        <p class="lead">Computer Science at UTAR. I love Python, data and AI: scrapers, data cleaners, prediction tools and the odd game. Click mini me →</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-yellow">See my work</a>
+          <a href="#contact" class="btn btn-white">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-stage">
+        <div class="bubble" id="bubble">
+          <p id="bubbleText" role="status" aria-live="polite">Psst… click me!</p>
+          <div class="choices" id="choices"></div>
+        </div>
+        <button class="mascot" id="mascot" type="button" aria-label="Cartoon of Yin Hern. Click for a message.">
+          <svg viewBox="0 0 220 240" aria-hidden="true">
+            <!-- backdrop -->
+            <circle class="m-bg" cx="110" cy="122" r="98" />
+            <g class="m-body">
+              <!-- hood collar -->
+              <path class="m-jacket" d="M74 166 C78 144 142 144 146 166 Z" />
+              <!-- neck -->
+              <rect class="m-skin" x="99" y="138" width="22" height="30" rx="4" />
+              <!-- jacket + tee -->
+              <path class="m-jacket" d="M40 238 C40 198 52 174 76 164 L144 164 C168 174 180 198 180 238 Z" />
+              <path class="m-shirt" d="M92 164 L128 164 L126 238 L94 238 Z" />
+              <path class="m-line-thin" d="M100 164 Q110 173 120 164" />
+              <path class="m-line" d="M92 164 L94 238 M128 164 L126 238" />
+              <path class="m-line-thin" d="M97 170 L99 196 M123 170 L121 196" />
+              <circle class="m-tip" cx="99" cy="198" r="3" />
+              <circle class="m-tip" cx="121" cy="198" r="3" />
+              <path class="m-line-thin" d="M56 210 L74 204 M164 204 L146 210" />
+              <!-- left arm (down) -->
+              <g class="m-arm-l">
+                <path class="m-sleeve-out" d="M68 172 Q48 196 50 222" />
+                <path class="m-sleeve" d="M68 172 Q48 196 50 222" />
+                <circle class="m-skin" cx="50" cy="226" r="9" />
+              </g>
+              <!-- right arm (waving) -->
+              <g class="m-arm-r">
+                <path class="m-sleeve-out" d="M152 172 Q182 160 188 128" />
+                <path class="m-sleeve" d="M152 172 Q182 160 188 128" />
+                <circle class="m-skin" cx="189" cy="120" r="10" />
+              </g>
+              <!-- ears + face -->
+              <circle class="m-skin" cx="66" cy="110" r="9" />
+              <circle class="m-skin" cx="154" cy="110" r="9" />
+              <ellipse class="m-skin" cx="110" cy="104" rx="44" ry="48" />
+              <!-- hair: bob with fringe -->
+              <path class="m-hair" d="M63 114 C56 70 78 42 110 42 C142 42 164 70 157 114 C153 102 151 94 149 88 Q139 97 129 86 Q119 97 109 86 Q99 97 89 86 Q79 97 71 88 C69 96 66 104 63 114 Z" />
+              <path class="m-hair-shine" d="M86 56 Q100 50 116 52" />
+              <!-- eyes -->
+              <g class="m-eye" data-eye>
+                <ellipse class="m-eye-white" cx="90" cy="112" rx="7" ry="8" />
+                <circle class="m-pupil" cx="90" cy="113" r="4" />
+                <circle class="m-glint" cx="91.5" cy="111" r="1.4" />
+              </g>
+              <g class="m-eye" data-eye>
+                <ellipse class="m-eye-white" cx="130" cy="112" rx="7" ry="8" />
+                <circle class="m-pupil" cx="130" cy="113" r="4" />
+                <circle class="m-glint" cx="131.5" cy="111" r="1.4" />
+              </g>
+              <!-- round glasses -->
+              <circle class="m-frame" cx="90" cy="112" r="15" />
+              <circle class="m-frame" cx="130" cy="112" r="15" />
+              <path class="m-line" d="M105 110 Q110 105 115 110 M75 109 L64 104 M145 109 L156 104" />
+              <!-- nose, cheeks, mouth -->
+              <path class="m-line-thin" d="M110 121 Q114 128 108 129" />
+              <ellipse class="m-cheek" cx="80" cy="134" rx="7" ry="4" />
+              <ellipse class="m-cheek" cx="140" cy="134" rx="7" ry="4" />
+              <path class="m-mouth" id="mouth" d="M100 137 Q110 145 120 137" />
+            </g>
+          </svg>
+        </button>
+        <div class="sticker sticker-1" data-drag>🎓 UTAR CS</div>
+        <div class="sticker sticker-2" data-drag>🐍 Python enjoyer</div>
+        <div class="sticker sticker-3" data-drag>🗣 EN · BM · 中文</div>
+        <p class="hint">(you can drag the stickers)</p>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Python ✦ Machine Learning ✦ Computer Vision ✦ Data Cleaning ✦ Web Scraping ✦ Kotlin ✦ C++ ✦ Supabase ✦ Docker ✦ Blender ✦</span>
+        <span>Python ✦ Machine Learning ✦ Computer Vision ✦ Data Cleaning ✦ Web Scraping ✦ Kotlin ✦ C++ ✦ Supabase ✦ Docker ✦ Blender ✦</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="section-title"><span class="tag tag-cyan">01</span> About me</h2>
+      <div class="about-grid">
+        <article class="card card-yellow about-main">
+          <h3>Who I am</h3>
+          <p>I'm a vibe coder based in Malaysia who likes to use python to make a lot of stuff. For example, making data management, making data scrapper or data prediction tools. </p>
+          <p>When I'm not coding you'll find me listening, gaming or city walk around KL to find ideas.</p>
+        </article>
+        <article class="card card-pink stat">
+          <strong data-count="9">0</strong>
+          <span>projects shipped</span>
+        </article>
+        <article class="card card-cyan stat">
+          <strong data-count="2">0</strong>
+          <span>collaboration</span>
+        </article>
+        <article class="card card-white skills">
+          <h3>Tool/Skills</h3>
+          <ul class="chips">
+            <li>Python</li><li>Claude</li><li>Codex</li><li>VS Code</li>
+            <li>SQLite</li><li>Supabase</li><li>Git</li><li>JavaScript</li><li>Accessibility</li>
+            <li>Docker</li><li>FastAPI</li><li>Kotlin</li><li>Java</li><li>C++</li><li>Blender</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="section-title"><span class="tag tag-yellow">02</span> Selected work</h2>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="btn btn-small is-active" data-filter="all" type="button">All</button>
+        <button class="btn btn-small" data-filter="data" type="button">Data &amp; AI</button>
+        <button class="btn btn-small" data-filter="app" type="button">Apps</button>
+        <button class="btn btn-small" data-filter="game" type="button">Games</button>
+      </div>
+      <div class="projects">
+        <article class="card project" data-type="data">
+          <div class="thumb thumb-1"><span>🧹</span></div>
+          <div class="project-body">
+            <h3>CSV Data Cleaner</h3>
+            <p>A Streamlit app that inspects messy CSVs, suggests safe cleaning steps, flags outliers for review and exports clean data with an audit report.</p>
+            <ul class="chips chips-sm"><li>Python</li><li>Streamlit</li><li>Pandas</li><li>pytest</li></ul>
+            <a class="link-arrow" href="https://github.com/CasperNg-2004/Data-Cleaner" target="_blank" rel="noopener">View repo →</a>
+          </div>
+        </article>
+        <article class="card project" data-type="data">
+          <div class="thumb thumb-2"><span>☕</span></div>
+          <div class="project-body">
+            <h3>KL Café Data Pipeline</h3>
+            <p>Collects public Google Maps data on cafés and drink shops across Kuala Lumpur — details, menus, popular times and reviews — then classifies photos with CLIP and reads menus with OCR.</p>
+            <ul class="chips chips-sm"><li>Crawlee</li><li>Playwright</li><li>CLIP</li><li>Tesseract</li></ul>
+            <a class="link-arrow" href="https://github.com/CasperNg-2004/Crawlee_Testing" target="_blank" rel="noopener">View repo →</a>
+          </div>
+        </article>
+        <article class="card project" data-type="app">
+          <div class="thumb thumb-3"><span>🥕</span></div>
+          <div class="project-body">
+            <h3>PantryPal — Food Saver App</h3>
+            <p>An offline-first Android pantry manager that tracks expiry dates, cuts food waste and suggests recipes from what's already at home. Built for SDG 1: No Poverty.</p>
+            <ul class="chips chips-sm"><li>Kotlin</li><li>Java</li><li>Android</li><li>WorkManager</li></ul>
+            <a class="link-arrow" href="https://github.com/CasperNg-2004/Food-Saver-App" target="_blank" rel="noopener">View repo →</a>
+          </div>
+        </article>
+        <article class="card project" data-type="data">
+          <div class="thumb thumb-4"><span>🤖</span></div>
+          <div class="project-body">
+            <h3>RL Game Agent</h3>
+            <p>Training an agent with reinforcement learning to play games built in the Godot engine.</p>
+            <ul class="chips chips-sm"><li>Python</li><li>Reinforcement Learning</li><li>Godot</li></ul>
+            <a class="link-arrow" href="https://github.com/CasperNg-2004/AI-technique-Assignment" target="_blank" rel="noopener">View repo →</a>
+          </div>
+        </article>
+        <article class="card project" data-type="app">
+          <div class="thumb thumb-1"><span>✈️</span></div>
+          <div class="project-body">
+            <h3>Flight Ticket Management System</h3>
+            <p>A C++20 console app for accounts, bookings, payments, check-in and invoices, with JSON storage written through atomic file replacement.</p>
+            <ul class="chips chips-sm"><li>C++20</li><li>JSON</li><li>Windows API</li></ul>
+            <a class="link-arrow" href="https://github.com/CasperNg-2004/Flight-Ticket-Management-System" target="_blank" rel="noopener">View repo →</a>
+          </div>
+        </article>
+        <article class="card project" data-type="game">
+          <div class="thumb thumb-2"><span>⚔️</span></div>
+          <div class="project-body">
+            <h3>Turn-Based RPG</h3>
+            <p>A simple turn-based role-playing game written in Python.</p>
+            <ul class="chips chips-sm"><li>Python</li><li>Game dev</li></ul>
+            <a class="link-arrow" href="https://github.com/CasperNg-2004/Games" target="_blank" rel="noopener">View repo →</a>
+          </div>
+        </article>
+        <article class="card project" data-type="app">
+          <div class="thumb thumb-3"><span>📊</span></div>
+          <div class="project-body">
+            <h3>Desktop ERP</h3>
+            <p>A local-first business system with onboarding pipelines, document OCR and role-based access.</p>
+            <ul class="chips chips-sm"><li>Node.js</li><li>SQLite</li><li>WebView2</li></ul>
+            <span class="link-arrow">Private project</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey" class="section">
+      <h2 class="section-title"><span class="tag tag-pink">03</span> Journey</h2>
+      <ol class="timeline">
+        <li class="card card-white">
+          <span class="when tag tag-yellow">2026 - 2027 Jan</span>
+          <h3>Internship</h3>
+          <p>Building web apps and internal tools for small businesses.</p>
+        </li>
+        <li class="card card-white">
+          <span class="when tag tag-pink">2023 — 2026</span>
+          <h3>B.Sc. Computer Science</h3>
+          <p>Universiti Tunku Abdul Rahman — graduated with honours.</p>
+        </li>
+        <li class="card card-white">
+          <span class="when tag tag-cyan">2017 — 2021</span>
+          <h3>Graduated</h3>
+          <p>Sekolah Menengah Kebangsaan Bandar Baru Sungai Long</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="card card-cyan contact">
+        <div class="peeker" aria-hidden="true">
+          <svg viewBox="0 0 120 70">
+            <ellipse class="m-skin" cx="60" cy="74" rx="42" ry="50" />
+            <path class="m-hair" d="M16 66 C12 30 32 10 60 10 C88 10 108 30 104 66 C101 54 99 46 97 40 Q88 48 80 38 Q70 48 60 38 Q50 48 40 38 Q32 48 23 40 C21 48 18 56 16 66 Z" />
+            <ellipse class="m-eye-white" cx="43" cy="58" rx="6" ry="7" />
+            <ellipse class="m-eye-white" cx="77" cy="58" rx="6" ry="7" />
+            <circle class="m-pupil peek-pupil" cx="43" cy="59" r="3.5" />
+            <circle class="m-pupil peek-pupil" cx="77" cy="59" r="3.5" />
+            <circle class="m-frame" cx="43" cy="58" r="13" />
+            <circle class="m-frame" cx="77" cy="58" r="13" />
+            <path class="m-line" d="M56 56 Q60 52 64 56" />
+          </svg>
+        </div>
+        <h2>Let's make something <mark class="hl-yellow">loud</mark>.</h2>
+        <p>Got a project, a question or just want to say hi? My inbox is open.</p>
+        <div class="hero-cta">
+          <a class="btn btn-yellow" href="mailto:ngyinhern@gmail.com">✉ ngyinhern@gmail.com</a>
+          <button class="btn btn-white" id="copyEmail" type="button" data-email="ngyinhern@gmail.com">Copy email</button>
+        </div>
+        <ul class="socials">
+          <li><a class="btn btn-small" href="https://github.com/CasperNg-2004" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a class="btn btn-small" href="https://www.linkedin.com/in/ng-yin-hern-02b629391/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a class="btn btn-small" href="#" >Resume (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> yin hern — built with ❤ and thick borders.</p>
+  </footer>
+
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
